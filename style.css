@@ -130,6 +130,7 @@ html, body {
     justify-content: center;
     font-family: 'Krona One';
     text-decoration: none;
+    cursor: pointer;
   }
   
   .github {
@@ -158,6 +159,43 @@ html, body {
       cursor: pointer;
     }
 
+    /* ----------------------------------------------------- */
+/* music player */
+
+  .music-player{
+    position:relative;
+    width: 450px;
+    height:120px;
+    top:390px;
+    left: 50%;                /* 가운데 기준으로 */
+    transform: translateX(-50%);  /* 자신의 너비의 절반만큼 왼쪽으로 이동 */
+  }
+
+  .now-playing{
+    position: absolute;
+    left: 120px;
+    font-family: 'Krona One';
+    font-size: 20px;
+    color:#677C58;
+    font-weight: bold;
+  }
+
+  .CD-icon{
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    width: 140px;   /* 원하는 가로 크기 */
+    height: auto;
+  }
+
+  .spotify-embed {
+    position: absolute;
+    width: 350px;
+    top: 40px;
+    left: 120px;
+    z-index: 10;
+  }
+  
     
 
     /* ---------------------------------------------------------- */
@@ -356,10 +394,7 @@ html, body {
   
 
   
-/* ----------------------------------------------------- */
-/* music player */
 
-  
 
 /* ----------------------------------------------------- */
 /* view-more-Works */
@@ -390,6 +425,7 @@ html, body {
      0    3px 0 #383838;
     font-size: 32px;
     font-family: 'Krona One';
+    cursor: pointer;
 
   }
   
