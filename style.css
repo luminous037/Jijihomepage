@@ -1,0 +1,446 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #f5f3ec;
+  }
+  
+  .page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .main-frame {
+    position: relative;
+    width: 1200px;
+    height: 910px;
+    transform: scale(0.7);
+    transform-origin: center center; /* ⬅️ 이게 핵심! */
+  }
+  
+  
+  /* Background */
+  .green-layer {
+    width: 1111px;
+    height: 654px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: url("static/images/left-card.png");
+  }
+  
+  .brown-layer {
+    width: 1085px;
+    height: 661px;
+    left: 116px;
+    top: 250px;
+    position: absolute;
+    background: url("static/images/right-card.png");
+  }
+
+  /*Profile Section*/
+  .profile-section{
+    position: relative;
+    left:0px;
+    width: 698px;
+    height: 800px;
+  }
+
+  /* Profile */
+
+  /*profile bubble*/
+  .profile-box {
+    position: absolute;
+
+    width: 559px;
+    height: 571px;
+
+    top: 32px;
+    left: 50%;                /* 가운데 기준으로 */
+    transform: translateX(-50%);  /* 자신의 너비의 절반만큼 왼쪽으로 이동 */
+    display: flex;
+    background: url("static/images/profile-bubble.png") no-repeat center center;
+    z-index: 2;
+  }
+
+  .profile-pic {
+    width: 260px;
+    height: 260px;
+    left: 430px;
+    margin-top: -15%;
+    position: absolute;
+    border-radius: 50px;
+    border: 9px #49583E solid;
+  }
+
+  .name-bio{
+    position:relative;
+  }
+
+  .name-box {
+    width: 421px;
+    height: 51px;
+    left: 63px;
+    top: 80px;
+    position: absolute;
+    font-size: 40px;
+    font-family: 'Krona One';
+    font-weight: bold;
+    color: black;
+  }
+
+  .bio {
+    width: 385px;
+    height: 126px;
+    left: 52px;
+    top: 146px;
+    position: absolute;
+    text-align: center;
+    color: #8E8E8E;
+    font-size: 14px;
+    font-family: 'Krona One';
+  }
+
+  .social-buttons{
+    position: absolute;
+    margin-top:54%;
+    margin-left:25%;
+    display: flex;
+    gap: 15px;
+    z-index: 2;
+  }
+
+  .btn {
+
+    border-radius: 50px;
+    padding: 10px;
+
+    background: #3C3C3C;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Krona One';
+  }
+  
+  .github {
+    width: 121px;
+    height: 40px;
+    left: 145px;
+    top: 266px;
+  }
+  
+  .instagram {
+    width: 178px;
+    height: 40px;
+    left: 280px;
+    top: 266px;
+  }
+
+
+    /* ---------------------------------------------------------- */
+    /* MBTI */
+
+   /* Green bar */
+  .green-bar {
+    position: relative;
+
+    display: flex;
+    width: 698px;
+    height: 299px;
+    left: 0px;
+    top: 500px;
+    color: white;
+    font-family: 'Lemon';
+    background: #677C58;
+    border-radius: 75px;
+
+    z-index: 1;
+
+  }
+
+  .mbti-container {
+    position: absolute;
+    display: flex;
+
+    gap: 30px;
+    top: 75px;
+    left: 40%;                /* 가운데 기준으로 */
+    transform: translateX(-50%);  /* 자신의 너비의 절반만큼 왼쪽으로 이동 */
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .mbti-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+  }
+  
+  .mbti-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  
+  .mbti-label {
+    font-family: 'Lemon';
+    font-size: 20px;
+    color: white;
+  }
+  
+  .mbti-type {
+    font-family: 'Lemon';
+    font-size: 64px;
+    color: white;
+  }
+  
+  .mbti-desc {
+    font-family: 'Lemon';
+    font-size: 12px;
+    color: white;
+    line-height: 1.5;
+  }
+  
+  .plant-img {
+    margin-top: 7%;
+    margin-left :65%;
+    width: 258px;
+    height: 258px;
+  }
+
+  /* ------------------------------------------------------------- */
+  /* corner decor section */
+
+  .corner-section{
+    position:relative;
+    width: 400px;
+    height: 300px;
+    left: 800px;
+    top: -800px;
+
+  }
+
+  .thinking-bubble {
+    width: 116px;
+    height: 107px;
+    left: 270px;
+    position: absolute;
+  }
+
+  .jiji-gif {
+    width: 230px;
+    height: 230px;
+    left: 20px;
+    position: absolute;
+    transform-origin: top left;
+  }
+  
+  .glasses-text {
+    width: 351px;
+    height: 45px;
+    margin-top: -10%;
+    position: absolute;
+    color: #3C3C3C;
+    font-size: 14px;
+    font-family: 'Krona One';
+  }
+
+  /* ------------------------------------------------------------- */
+  /* Card Section */
+
+  .card-section {
+    width: 426px;
+    height: 392px;
+    left: 739px;
+    top: 361px;
+    position: absolute;
+    font-family: 'Krona One'
+  }
+  
+  .top-bar {
+    position: absolute;
+    width: 466px;
+    height: 68px;
+    margin-top: -20%;
+    margin-left:5%;
+  }
+
+  .my-works {
+    margin-top: -15%;
+    margin-left:9%;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .under-construction {
+    width:400px;
+    margin-top: -15%;
+    margin-left:50%;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+  }
+
+  .card {
+    width: 426px;
+    height: 150px;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .card-1{
+    top:10px;
+  }
+  .card-2 {
+    top: 25px;
+  }
+  
+  .card-img {
+    width: 426px;
+    height: 150px;
+    border-radius: 30px;
+    position: absolute;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .card-overlay {
+    width: 426px;
+    height: 150px;
+    position: absolute;
+    background: rgba(73, 73, 73, 0.3);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .card-text {
+    position:absolute;
+    color: white;
+    top:20px;
+    left:20px;
+    font-size: 24px;
+    font-weight: bold;
+    word-wrap: break-word;
+
+    z-index: 2;
+  }
+  
+  
+/* ----------------------------------------------------- */
+/* music player */
+
+  
+
+/* ----------------------------------------------------- */
+/* view-more-Works */
+  
+  .view-more-box {
+    width: 228.72px;
+    height: 180.11px;
+    left: 743.93px;
+    top: 702.70px;
+    position: absolute;
+    background: url("./static/images/more-works-button.png");
+    
+  }
+  
+  .view-more-text {
+    left: 770px;
+    top: 724px;
+    position: absolute;
+    color: white;
+    text-shadow:
+    -2px -2px 0 #383838,
+     2px -2px 0 #383838,
+    -2px  2px 0 #383838,
+     2px  2px 0 #383838,
+    -3px  0   0 #383838,
+     3px  0   0 #383838,
+     0   -3px 0 #383838,
+     0    3px 0 #383838;
+    font-size: 32px;
+    font-family: 'Krona One';
+
+  }
+  
+  .click-text {
+    width: 99px;
+    height: 23px;
+    left: 842px;
+    top: 809px;
+    position: absolute;
+    color: white;
+    text-shadow:
+    -2px -2px 0 #383838,
+     2px -2px 0 #383838,
+    -2px  2px 0 #383838,
+     2px  2px 0 #383838,
+    -3px  0   0 #383838,
+     3px  0   0 #383838,
+     0   -3px 0 #383838,
+     0    3px 0 #383838;
+    font-size: 20px;
+    font-family: 'Krona One';
+  }
+  
+  /* ----------------------------------------------------- */
+  /* Ko-fi */
+  .kofi-button {
+    width: 172px;
+    height: 172px;
+    left: 995px;
+    top: 711px;
+    position: absolute;
+    background : url("static/images/ko-fi-button.png") no-repeat center center;
+  }
+
+  /* ----------------------------------------------------- */
+  /* bottom */
+
+  .bottom-jiji {
+    width: 99.27px;
+    height: 99.27px;
+    left: 170px;
+    top: 810px;
+    position: absolute;
+    transform-origin: top left;
+  }
+  
+  .code-box {
+    width: 373px;
+    height: 44px;
+    left: 284px;
+    top: 840px;
+    position: absolute;
+    background: url("static/images/chat-bubble.png")
+  }
+  
+  .code-text {
+    width: 400px;
+    left: 308px;
+    top: 845px;
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    font-family: 'Hi Melody';
+  }
+  
+  
+  
+  
+
+  
