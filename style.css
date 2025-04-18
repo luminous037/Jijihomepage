@@ -368,7 +368,7 @@ html, body {
     z-index: 1;
   }
   
-  .card-overlay {
+  .card-overlay-1 {
     width: 426px;
     height: 150px;
     position: absolute;
@@ -378,6 +378,36 @@ html, body {
     justify-content: center;
     align-items: center;
     z-index: 1;
+
+    cursor: pointer;
+  }
+
+  .card-overlay-2 {
+    width: 426px;
+    height: 150px;
+    position: absolute;
+    background: rgba(73, 73, 73, 0.3);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    cursor: pointer;
+  }
+
+  .card-overlay-1:hover {
+    width: 426px;
+    height: 150px;
+    position: absolute;
+    background: rgba(171, 200, 196, 0.3);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    cursor: pointer;
   }
   
   .card-text {
@@ -388,7 +418,7 @@ html, body {
     font-size: 24px;
     font-weight: bold;
     word-wrap: break-word;
-
+    pointer-events: none; /*눈엔 보이지만 이벤트 차단*/
     z-index: 2;
   }
   
@@ -499,6 +529,8 @@ html, body {
   
   
   
+  
+
   
 
   
