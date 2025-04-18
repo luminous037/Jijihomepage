@@ -114,6 +114,7 @@ html, body {
     display: flex;
     gap: 15px;
     z-index: 2;
+  
   }
 
   .btn {
@@ -128,6 +129,7 @@ html, body {
     align-items: center;
     justify-content: center;
     font-family: 'Krona One';
+    text-decoration: none;
   }
   
   .github {
@@ -144,6 +146,19 @@ html, body {
     top: 266px;
   }
 
+  .btn.github:hover,
+    .btn.instagram:hover {
+      background: #555;
+      cursor: pointer;
+    }
+
+    .kofi-button:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    
 
     /* ---------------------------------------------------------- */
     /* MBTI */
@@ -339,6 +354,7 @@ html, body {
     z-index: 2;
   }
   
+
   
 /* ----------------------------------------------------- */
 /* music player */
@@ -397,6 +413,12 @@ html, body {
     font-family: 'Krona One';
   }
   
+  .view-more-text:hover {
+    font-size: 36px;
+    transition: font-size 0.3s ease;
+    cursor: pointer;
+  }
+
   /* ----------------------------------------------------- */
   /* Ko-fi */
   .kofi-button {
