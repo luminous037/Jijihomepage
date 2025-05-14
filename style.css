@@ -21,35 +21,80 @@ html, body {
     width: 1200px;
     height: 910px;
     transform: scale(0.7);
-    transform-origin: center center; /* ⬅️ 이게 핵심! */
+    transform-origin: center center;
+  }
+
+  /* left-section*/
+
+  .left-section{
+    position:absolute;
+    width: 698px;
+    height: 800px;
+    transition: transform 1.2s ease-out;
+    z-index:3;
   }
   
-  
+  .left-section:hover{
+    transform: translateY(-10px);
+  }
+
   /* Background */
   .green-layer {
-    width: 1111px;
-    height: 654px;
+    position: absolute;
+
+    width: 698px;
+    height: 800px;
     left: 0px;
     top: 0px;
-    position: absolute;
+    
     background: url("static/images/left-card.png");
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+  }
+
+  .right-section{
+    position:relative;
+    top: 50px;
+    width: 698px;
+    height: 800px;
+    transition: transform 1.2s ease-out;
+    z-index:2;
   }
   
+  .right-section:hover{
+    transform: translateY(-10px);
+  }
+  
+
   .brown-layer {
+    position: relative;
     width: 1085px;
     height: 661px;
     left: 116px;
     top: 250px;
-    position: absolute;
-    background: url("static/images/right-card.png");
+    animation: slideUp 1.8s ease-out forwards;
+    z-index:2;
   }
+
+
+  .right-card{
+    position:absolute;
+
+    top:-185px;
+    left:0px;
+
+    z-index:1;
+  }
+
 
   /*Profile Section*/
   .profile-section{
     position: relative;
     left:0px;
     width: 698px;
-    height: 800px;
+    height: 500px;
+
+    z-index: 2;
+
   }
 
   /* Profile */
@@ -62,11 +107,10 @@ html, body {
     height: 571px;
 
     top: 32px;
-    left: 50%;                /* 가운데 기준으로 */
-    transform: translateX(-50%);  /* 자신의 너비의 절반만큼 왼쪽으로 이동 */
+    left: 50%;               
+    transform: translateX(-50%);  
     display: flex;
     background: url("static/images/profile-bubble.png") no-repeat center center;
-    z-index: 2;
   }
 
   .profile-pic {
@@ -138,6 +182,8 @@ html, body {
     height: 40px;
     left: 145px;
     top: 266px;
+
+    user-select: none;
   }
   
   .instagram {
@@ -145,6 +191,8 @@ html, body {
     height: 40px;
     left: 280px;
     top: 266px;
+
+    user-select: none;
   }
 
   .btn.github:hover,
@@ -178,6 +226,8 @@ html, body {
     font-size: 20px;
     color:#677C58;
     font-weight: bold;
+
+    user-select: none;
   }
 
   .CD-icon{
@@ -195,40 +245,38 @@ html, body {
     left: 120px;
     z-index: 10;
   }
+
+  .youtube-embed {
+    position: absolute;
+    width: 350px;
+    top: 40px;
+    left: 120px;
+    z-index: 10;
+  }
+  
   
     
 
     /* ---------------------------------------------------------- */
     /* MBTI */
 
-   /* Green bar */
-  .green-bar {
-    position: relative;
 
-    display: flex;
-    width: 698px;
-    height: 299px;
-    left: 0px;
-    top: 500px;
-    color: white;
-    font-family: 'Lemon';
-    background: #677C58;
-    border-radius: 75px;
-
-    z-index: 1;
-
-  }
 
   .mbti-container {
-    position: absolute;
+    position: relative;
     display: flex;
 
+    left: 0px;
+    top: 95px;
+    width: 400px;
+    height: 299px;
+
     gap: 30px;
-    top: 75px;
-    left: 40%;                /* 가운데 기준으로 */
+    left: 41%;                /* 가운데 기준으로 */
     transform: translateX(-50%);  /* 자신의 너비의 절반만큼 왼쪽으로 이동 */
     display: flex;
     align-items: flex-start;
+    z-index: 1;
   }
   
   .mbti-text-box {
@@ -242,33 +290,40 @@ html, body {
     display: flex;
     align-items: flex-end;
     gap: 20px;
+    pointer-events: none;
   }
   
   .mbti-label {
     font-family: 'Lemon';
-    font-size: 20px;
+    font-size: 25px;
     color: white;
+    pointer-events: none;
   }
   
   .mbti-type {
+    position: absolute;
     font-family: 'Lemon';
-    font-size: 64px;
+
+    top: -30px;
+    left: 190px;
+    font-size: 55px;
     color: white;
+    pointer-events: none;
   }
   
   .mbti-desc {
+    position: absolute;
+    width:340px;
+    top: 35px;
+    left: 100px;
     font-family: 'Lemon';
     font-size: 12px;
     color: white;
     line-height: 1.5;
+    pointer-events: none;
   }
   
-  .plant-img {
-    margin-top: 7%;
-    margin-left :65%;
-    width: 258px;
-    height: 258px;
-  }
+ 
 
   /* ------------------------------------------------------------- */
   /* corner decor section */
@@ -278,7 +333,7 @@ html, body {
     width: 400px;
     height: 300px;
     left: 800px;
-    top: -800px;
+    top: 0px;
 
   }
 
@@ -305,6 +360,29 @@ html, body {
     color: #3C3C3C;
     font-size: 14px;
     font-family: 'Krona One';
+
+    user-select: none;
+  }
+/* ------------------------------------------------------------- */
+  /* nav-bar */
+
+  .nav-bar {
+    position: relative;
+    width: 759px;
+    height: 38px;
+  }
+
+  .nav-home{
+    position: absolute;
+
+  }
+  .nav-journal{
+    position: absolute;
+
+  }
+  .nav-login{
+    position: absolute;
+
   }
 
   /* ------------------------------------------------------------- */
@@ -313,10 +391,13 @@ html, body {
   .card-section {
     width: 426px;
     height: 392px;
-    left: 739px;
-    top: 361px;
+    left: 639px;
+    top: 10px;
     position: absolute;
-    font-family: 'Krona One'
+    font-family: 'Krona One';
+
+    z-index: 2;
+    
   }
   
   .top-bar {
@@ -333,6 +414,8 @@ html, body {
     position: absolute;
     color: white;
     font-size: 20px;
+
+    user-select: none;
   }
   
   .under-construction {
@@ -342,6 +425,8 @@ html, body {
     position: absolute;
     color: white;
     font-size: 20px;
+
+    user-select: none;
   }
 
   .card {
@@ -423,66 +508,88 @@ html, body {
   }
   
 
-  
 
 
 /* ----------------------------------------------------- */
 /* view-more-Works */
-  
+
+.bottom-button-section{
+  position : relative;
+  left: 650px;
+  top: 420px;
+  width: 426px;
+  height: 392px;
+}
+
   .view-more-box {
     width: 228.72px;
     height: 180.11px;
-    left: 743.93px;
-    top: 702.70px;
+
+    left: -25px;
     position: absolute;
     background: url("./static/images/more-works-button.png");
-    
+    z-index: 2;
   }
   
   .view-more-text {
-    left: 770px;
-    top: 724px;
+
+    top: 44px;
+    left: 15px;
+    width: 228px;
+    height: 180px;
+
     position: absolute;
     color: white;
     text-shadow:
-    -2px -2px 0 #383838,
-     2px -2px 0 #383838,
-    -2px  2px 0 #383838,
-     2px  2px 0 #383838,
-    -3px  0   0 #383838,
-     3px  0   0 #383838,
-     0   -3px 0 #383838,
-     0    3px 0 #383838;
+    -4px -4px 0 #383838,
+     4px -4px 0 #383838,
+    -4px  4px 0 #383838,
+     4px  4px 0 #383838,
+    -5px  0   0 #383838,
+     5px  0   0 #383838,
+     0   -5px 0 #383838,
+     0    5px 0 #383838;
     font-size: 32px;
     font-family: 'Krona One';
     cursor: pointer;
 
+    user-select: none;
+    z-index: 2;
   }
   
   .click-text {
+
+    top: 130px;
+    left: 100px;
+
     width: 99px;
     height: 23px;
-    left: 842px;
-    top: 809px;
+
     position: absolute;
     color: white;
     text-shadow:
-    -2px -2px 0 #383838,
-     2px -2px 0 #383838,
-    -2px  2px 0 #383838,
-     2px  2px 0 #383838,
-    -3px  0   0 #383838,
-     3px  0   0 #383838,
-     0   -3px 0 #383838,
-     0    3px 0 #383838;
+    -4px -4px 0 #383838,
+     4px -4px 0 #383838,
+    -4px  4px 0 #383838,
+     4px  4px 0 #383838,
+    -5px  0   0 #383838,
+     5px  0   0 #383838,
+     0   -5px 0 #383838,
+     0    5px 0 #383838;
     font-size: 20px;
     font-family: 'Krona One';
+
+    user-select: none;
+    z-index: 2;
   }
   
   .view-more-text:hover {
-    font-size: 36px;
+    width: 300px;
+    height: 180px;
+    font-size: 34px;
     transition: font-size 0.3s ease;
     cursor: pointer;
+    z-index:3;
   }
 
   /* ----------------------------------------------------- */
@@ -490,20 +597,28 @@ html, body {
   .kofi-button {
     width: 172px;
     height: 172px;
-    left: 995px;
-    top: 711px;
+    left: 230px;
+
     position: absolute;
     background : url("static/images/ko-fi-button.png") no-repeat center center;
+    z-index: 2;
   }
 
   /* ----------------------------------------------------- */
   /* bottom */
 
+  .bottom-section{
+    position: relative;
+    width: 400px;
+    height: 99.27px;
+    top: 100px;
+    left: -600px;
+    z-index: 2;
+  }
+
   .bottom-jiji {
     width: 99.27px;
     height: 99.27px;
-    left: 170px;
-    top: 810px;
     position: absolute;
     transform-origin: top left;
   }
@@ -511,26 +626,18 @@ html, body {
   .code-box {
     width: 373px;
     height: 44px;
-    left: 284px;
-    top: 840px;
+    top: 40px;
+    left: 120px;
     position: absolute;
     background: url("static/images/chat-bubble.png")
   }
   
   .code-text {
     width: 400px;
-    left: 308px;
-    top: 845px;
+    top: 45px;
+    left: 145px;
     position: absolute;
     color: black;
     font-size: 24px;
     font-family: 'Hi Melody';
   }
-  
-  
-  
-  
-
-  
-
-  
