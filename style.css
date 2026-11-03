@@ -1,3 +1,22 @@
+/* Pusheen cursors: static first frames extracted from the supplied ANI files. */
+:root {
+  --cursor-default: url("static/cursors/pusheen-default.cur");
+  --cursor-link: url("static/cursors/pusheen-link.cur");
+  --cursor-text: url("static/cursors/pusheen-text.cur");
+}
+
+html, body {
+  cursor: var(--cursor-default), auto;
+}
+
+a, button, [role="button"], [onclick] {
+  cursor: var(--cursor-link), pointer;
+}
+
+.bio, .mbti-desc, .code-text, input, textarea, [contenteditable="true"] {
+  cursor: var(--cursor-text), text;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -116,6 +135,17 @@ html, body {
 
   /* Profile */
 
+  .sumikko-decoration {
+    position: absolute;
+    width: 155px;
+    height: auto;
+    left: -55px;
+    top: 85px;
+    z-index: 3;
+    pointer-events: none;
+    user-select: none;
+  }
+
   /*profile bubble*/
   .profile-box {
     position: absolute;
@@ -192,7 +222,7 @@ html, body {
     justify-content: center;
     font-family: 'Krona One';
     text-decoration: none;
-    cursor: pointer;
+    cursor: var(--cursor-link), pointer;
   }
   
   .github {
@@ -212,12 +242,12 @@ html, body {
   .btn.github:hover,
     .btn.instagram:hover {
       background: #555;
-      cursor: pointer;
+      cursor: var(--cursor-link), pointer;
     }
 
     .kofi-button:hover {
       transform: scale(1.05);
-      cursor: pointer;
+      cursor: var(--cursor-link), pointer;
     }
 
     /* ----------------------------------------------------- */
@@ -435,7 +465,7 @@ html, body {
     align-items: center;
     z-index: 1;
 
-    cursor: pointer;
+    cursor: var(--cursor-link), pointer;
   }
 
   .card-overlay-2 {
@@ -449,7 +479,7 @@ html, body {
     align-items: center;
     z-index: 1;
 
-    cursor: pointer;
+    cursor: var(--cursor-link), pointer;
   }
 
   .card-overlay-1:hover {
@@ -463,7 +493,7 @@ html, body {
     align-items: center;
     z-index: 1;
 
-    cursor: pointer;
+    cursor: var(--cursor-link), pointer;
   }
   
   .card-text {
@@ -511,7 +541,7 @@ html, body {
      0    3px 0 #383838;
     font-size: 32px;
     font-family: 'Krona One';
-    cursor: pointer;
+    cursor: var(--cursor-link), pointer;
 
   }
   
@@ -537,7 +567,7 @@ html, body {
   
   .view-more-text:hover {
     font-size: 36px;
-    cursor: pointer;
+    cursor: var(--cursor-link), pointer;
   }
 
   /* ----------------------------------------------------- */
